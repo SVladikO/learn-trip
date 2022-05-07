@@ -1,18 +1,20 @@
 import React from "react";
-import styled from 'styled-components';
+import styled, {keyframes, css} from 'styled-components';
+import {flex} from '../common.style'
 
 export const Wrapper = styled.div`
   width: 300px;
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 0 10px;
 `;
 
 export const Header = styled.div`
-  display: flex;
+  ${flex};
+  justify-content: space-between;
   font-size: 16px;
-  padding: 5px;
-  border: 2px ${p => p.style.borderColor} solid;
+  padding: 0 5px;
+  border-bottom: solid 1px black;
 `;
 
 export const Logo = styled.div`
@@ -26,7 +28,28 @@ export const Logo = styled.div`
 
 `;
 export const Title = styled.div``;
-export const Percentage = styled.div``;
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const Percentage = styled.div`
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height: 34px;
+  width: 34px;
+  margin: 0 2px 0 0;
+  //animation: ${rotate} 2s linear;
+`;
+
 export const SwitchButton = styled.div``;
 export const ArticlesWrapper = styled.div`
   display: flex;
