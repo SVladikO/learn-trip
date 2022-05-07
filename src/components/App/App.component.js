@@ -14,7 +14,22 @@ function AppComponent() {
             },
             articles: [
                 {id: '1', title: 'First 1', isDone: true},
-                {id: '2', title: 'Second 2', isDone: false}
+                {id: '2', title: 'ttt', isDone: false},
+                {id: '3', title: 'ttt', isDone: false},
+                {id: '4', title: 'ttt', isDone: false},
+                {id: '5', title: 'ttt', isDone: false},
+                {id: '6', title: 'ttt', isDone: false},
+                {id: '7', title: 'ttt', isDone: false},
+                {id: '8', title: 'ttt', isDone: false},
+                {id: '9', title: 'ttt', isDone: false},
+                {id: '10', title: 'ttt', isDone: false},
+                {id: '11', title: 'ttt', isDone: false},
+                {id: '12', title: 'ttt', isDone: false},
+                {id: '13', title: 'ttt', isDone: false},
+                {id: '14', title: 'ttt', isDone: false},
+                {id: '15', title: 'ttt', isDone: false},
+                {id: '16', title: 'ttt', isDone: false},
+                {id: '17', title: 'ttt', isDone: false},
             ],
             style: {
                 borderColor: 'blue',
@@ -27,7 +42,7 @@ function AppComponent() {
             },
             articles: [
                 {id: '1', title: 'First 1', isDone: false},
-                {id: '2', title: 'Second 2', isDone: false}
+                {id: '2', title: 'ttt', isDone: false}
             ],
             style: {
                 borderColor: 'yellow',

@@ -17,12 +17,10 @@ const style = {
 
 export default ({article}) => (
     <Article>
-
         <Title>
             <Index>{article.id}.{' '}</Index>
             {article.title}
         </Title>
-
         {article.isDone
             ? <Checkmark style={style} />
             // ? <RemoveIcon style={style}/>

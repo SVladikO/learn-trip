@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
 `;
 export const SkillsWrapper = styled.div`
+  margin: 40px 0 0 0;
   display: flex;
 `;
 
