@@ -16,6 +16,7 @@ export default ({data={}}) => {
     const percentage = 100;
     const {header, articles = [], style={}} = data;
     console.log({header})
+
     return (
         <Wrapper>
             <Header style={style}>

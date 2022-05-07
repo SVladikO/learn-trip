@@ -1,10 +1,11 @@
 import React from 'react';
 
-import Skill from './components/Skill/Skill.component';
+import Skill from '../Skill/Skill.component';
+import NavBar from '../NavBar/NavBar.component';
 
-import './App.css';
+import {Wrapper, SkillsWrapper} from './App.style';
 
-function App() {
+function AppComponent() {
     const skills = [
         {
             header: {
@@ -12,7 +13,7 @@ function App() {
                 logo: 'https://raw.githubusercontent.com/SVladikO/SkillsLogo/b601db5d2e0925f6ba04d7bc4bef2ea914fbbb3d/react.svg',
             },
             articles: [
-                {id: '1', title: 'First 1', isDone: false},
+                {id: '1', title: 'First 1', isDone: true},
                 {id: '2', title: 'Second 2', isDone: false}
             ],
             style: {
@@ -34,10 +35,13 @@ function App() {
         }];
 
     return (
-        <div className="App">
-            {skills.map(skill => <Skill data={skill}/>)}
-        </div>
+        <Wrapper>
+            <NavBar />
+            <SkillsWrapper>
+                {skills.map(skill => <Skill data={skill}/>)}
+            </SkillsWrapper>
+        </Wrapper>
     );
 }
 
-export default App;
+export default AppComponent;
