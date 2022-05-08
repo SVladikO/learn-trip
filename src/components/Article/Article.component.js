@@ -26,15 +26,15 @@ export default ({article}) => {
                         ? article.title
                         : <React.Fragment>
                             <Input value={article.title} onChange={() => {}} />
-                            <CheckmarkIcon onClick={() => toggleInput}  style={style} />
+                            <CheckmarkIcon onClick={toggleInput}  style={style} />
                         </React.Fragment>
                     }
                 </Title>
             </Left>
 
             {article.isDone
-                    ? <RemoveIcon style={style}/>
-                    : <AddIcon style={style}/>
+                    ? <RemoveIcon style={style} onClick={() => console.log(`${article.title} was undone`)}/>
+                    : <AddIcon style={style} onClick={() => console.log(`${article.title} was done`)}/>
             }
         </Article>
     )
