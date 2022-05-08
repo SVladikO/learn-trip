@@ -4,7 +4,7 @@ import {ReactComponent as AddIcon} from '../../icon/add.svg';
 import {ReactComponent as CheckmarkIcon} from '../../icon/checkmark.svg';
 import {ReactComponent as RemoveIcon} from '../../icon/remove.svg';
 
-import {Article, Index, Title,} from './Article.style';
+import {Article, Index, Title, Input} from './Article.style';
 import {Left, Right} from '../common.style';
 
 const style = {
@@ -24,14 +24,15 @@ export default ({article}) => {
                 <Title onDoubleClick={toggleInput}>
                     {toggle
                         ? article.title
-                        : <input value={article.title}/>
+                        : <React.Fragment>
+                            <Input value={article.title}/>
+                            <CheckmarkIcon onClick={() => {console.log('ha'); toggleInput();}}  style={style} />
+                        </React.Fragment>
                     }
                 </Title>
             </Left>
 
-            {!toggle
-                ? <CheckmarkIcon onClick={() => {console.log('ha'); toggleInput();}}  style={style} />
-                : article.isDone
+            {article.isDone
                     ? <RemoveIcon style={style}/>
                     : <AddIcon style={style}/>
             }

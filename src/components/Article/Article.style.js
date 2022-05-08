@@ -11,6 +11,9 @@ export const Article = styled.div`
   margin: 0 0 5px 0;
 `;
 export const Index = styled.div``;
+export const Input = styled.input`
+  width: 180px;
+`;
 export const Icon = styled.button`
   border: none;
   height: 20px;
@@ -25,6 +28,10 @@ export const Icon = styled.button`
 export const Title = styled.div`
   font-size: 14px;
   display: flex;
+  
+  &:hover {
+    cursor: pointer;
+  }
 `;
 export const Done = styled.div``;
 export const Submit = styled.button``;
