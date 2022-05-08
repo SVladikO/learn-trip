@@ -47,7 +47,7 @@ function AppComponent() {
         <Wrapper>
             <NavBar />
             <SkillsWrapper>
-                {skills.map(skill => <Skill data={skill}/>)}
+                {skills.map(skill => <Skill key={skill.header.title} data={skill}/>)}
                 <button style={{height: '20px'}}>Add trip</button>
             </SkillsWrapper>
         </Wrapper>

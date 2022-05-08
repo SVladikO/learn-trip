@@ -28,7 +28,7 @@ export default ({data = {}}) => {
                 </Right>
             </Header>
             <ArticlesWrapper>
-                {articles.map(article => <Article article={article}/>)}
+                {articles.map(article => <Article key={article.id} article={article}/>)}
                 <button>Add article</button>
             </ArticlesWrapper>
         </Wrapper>
