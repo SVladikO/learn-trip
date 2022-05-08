@@ -13,7 +13,6 @@ export default ({data = {}}) => {
     const TOTAL = articles.length;
     const TOTAL_DONE = articles.filter(a => a.isDone).length;
     const percentage = 100 * TOTAL_DONE / TOTAL;
-    console.log({header})
 
     return (
         <Wrapper>
