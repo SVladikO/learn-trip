@@ -2,6 +2,7 @@ import React from 'react';
 
 import Skill from '../Skill/Skill.component';
 import NavBar from '../NavBar/NavBar.component';
+import Button from '../Button/Button.component';
 
 import {Wrapper, SkillsWrapper, AddTripWrapper} from './App.style';
 
@@ -50,7 +51,7 @@ function AppComponent() {
                 {skills.map(skill => <Skill key={skill.header.title} data={skill}/>)}
                 <AddTripWrapper>
                     <input placeholder={'Add trip name'}/>
-                    <button style={{height: '20px'}}>Add trip</button>
+                    <Button style={{height: '20px'}}>Add trip</Button>
                 </AddTripWrapper>
             </SkillsWrapper>
         </Wrapper>
