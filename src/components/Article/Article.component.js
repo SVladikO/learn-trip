@@ -1,8 +1,10 @@
 import React from "react";
 
-import {ReactComponent as AddIcon} from '../../icon/add.svg';
-import {ReactComponent as CheckmarkIcon} from '../../icon/checkmark.svg';
-import {ReactComponent as RemoveIcon} from '../../icon/remove.svg';
+import AddIconUrl from '../../icon/add.svg';
+import CheckmarkIconUrl from '../../icon/checkmark.svg';
+import RemoveIconUrl from '../../icon/remove.svg';
+
+import Icon from '../Icon/Icon.component';
 
 import {Article, Index, Title, Input} from './Article.style';
 import {Left} from '../common.style';
@@ -26,15 +28,15 @@ export default ({article}) => {
                         ? article.title
                         : <React.Fragment>
                             <Input value={article.title} onChange={() => {}} />
-                            <CheckmarkIcon onClick={toggleInput}  style={style} />
+                            <Icon url={CheckmarkIconUrl} onClick={toggleInput} style={style} />
                         </React.Fragment>
                     }
                 </Title>
             </Left>
 
             {article.isDone
-                    ? <RemoveIcon style={style} onClick={() => console.log(`${article.title} was undone`)}/>
-                    : <AddIcon style={style} onClick={() => console.log(`${article.title} was done`)}/>
+                    ? <Icon url={RemoveIconUrl} onClick={() => console.log(`${article.title} was undone`)}/>
+                    : <Icon url={AddIconUrl} onClick={() => console.log(`${article.title} was done`)}/>
             }
         </Article>
     )

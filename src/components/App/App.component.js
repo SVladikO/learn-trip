@@ -3,7 +3,7 @@ import React from 'react';
 import Skill from '../Skill/Skill.component';
 import NavBar from '../NavBar/NavBar.component';
 
-import {Wrapper, SkillsWrapper} from './App.style';
+import {Wrapper, SkillsWrapper, AddTripWrapper} from './App.style';
 
 function AppComponent() {
     const skills = [
@@ -45,10 +45,13 @@ function AppComponent() {
 
     return (
         <Wrapper>
-            <NavBar />
+            <NavBar/>
             <SkillsWrapper>
                 {skills.map(skill => <Skill key={skill.header.title} data={skill}/>)}
-                <button style={{height: '20px'}}>Add trip</button>
+                <AddTripWrapper>
+                    <input placeholder={'Add trip name'}/>
+                    <button style={{height: '20px'}}>Add trip</button>
+                </AddTripWrapper>
             </SkillsWrapper>
         </Wrapper>
     );

@@ -1,7 +1,9 @@
 import React from 'react';
 
-import {ReactComponent as EditIcon} from '../../icon/edit.svg';
-import {ReactComponent as AddIcon} from '../../icon/add.svg';
+import EditIconUrl from '../../icon/edit.svg';
+import AddIconUrl from '../../icon/add.svg';
+
+import Icon from '../Icon/Icon.component';
 
 import {Wrapper, ProjectName} from "./NavBar.style";
 import {Left, Right} from '../common.style';
@@ -13,8 +15,8 @@ export default () => {
                 <ProjectName>Learn Trip</ProjectName>
             </Left>
             <Right>
-                <AddIcon style={{width: '20px'}}  />
-                <EditIcon style={{width: '20px'}} />
+                <Icon url={AddIconUrl} />
+                <Icon url={EditIconUrl} />
             </Right>
         </Wrapper>
     )

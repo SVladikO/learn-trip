@@ -1,4 +1,3 @@
-import React from "react";
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
@@ -11,4 +10,7 @@ export const SkillsWrapper = styled.div`
   display: flex;
 `;
 
-
+export const AddTripWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;

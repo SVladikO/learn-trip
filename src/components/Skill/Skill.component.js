@@ -4,8 +4,9 @@ import {Wrapper, Header, Logo, Title, Percentage, ArticlesWrapper} from "./Skill
 import {Left, Right} from '../common.style';
 
 import Article from "../Article/Article.component";
+import Icon from "../Icon/Icon.component";
 
-import {ReactComponent as ChevronUp} from "../../icon/chevron-up.svg";
+import ChevronUpUrl from "../../icon/chevron-up.svg";
 
 export default ({data = {}}) => {
 
@@ -23,11 +24,12 @@ export default ({data = {}}) => {
                 </Left>
                 <Right>
                     <Percentage>{percentage.toFixed(0)}%</Percentage>
-                    <ChevronUp style={{width: '20px'}}/>
+                    <Icon url={ChevronUpUrl} />
                 </Right>
             </Header>
             <ArticlesWrapper>
                 {articles.map(article => <Article key={article.id} article={article}/>)}
+                <input onChange={() => {}} placeholder={'Enter article name'}/>
                 <button>Add article</button>
             </ArticlesWrapper>
         </Wrapper>
