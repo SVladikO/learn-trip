@@ -50,7 +50,7 @@ function AppComponent() {
             <SkillsWrapper>
                 {skills.map(skill => <Skill key={skill.header.title} data={skill}/>)}
                 <AddTripWrapper>
-                    <input placeholder={'Add trip name'}/>
+                    <input placeholder={'Enter trip name'}/>
                     <Button style={{height: '20px'}}>Add trip</Button>
                 </AddTripWrapper>
             </SkillsWrapper>
