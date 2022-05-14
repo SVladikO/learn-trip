@@ -6,13 +6,8 @@ import RemoveIconUrl from '../../icon/remove.svg';
 
 import Icon from '../Icon/Icon.component';
 
-import {Article, Index, Title, Input} from './Article.style';
+import {Article, Title, Input} from './Article.style';
 import {Left} from '../common.style';
-
-const style = {
-    height: '18px',
-    width: '20px',
-}
 
 export default ({article}) => {
     const [toggle, setToggle] = React.useState(true);
@@ -22,13 +17,12 @@ export default ({article}) => {
     return (
         <Article>
             <Left>
-                <Index>{article.id}.{' '}</Index>
                 <Title onDoubleClick={toggleInput}>
                     {toggle
                         ? article.title
                         : <React.Fragment>
                             <Input value={article.title} onChange={() => {}} />
-                            <Icon url={CheckmarkIconUrl} onClick={toggleInput} style={style} />
+                            <Icon url={CheckmarkIconUrl} onClick={toggleInput} />
                         </React.Fragment>
                     }
                 </Title>

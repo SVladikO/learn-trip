@@ -29,6 +29,19 @@ export const Logo = styled.div`
 `;
 export const Title = styled.div``;
 
+export const GroupContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const GroupTitle = styled.div`
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  margin: 10px 0 10px;
+`;
+
 const rotate = keyframes`
   from {
     transform: rotate(0deg);
@@ -47,7 +60,7 @@ export const Percentage = styled.div`
   height: 34px;
   width: 34px;
   margin: 0 2px 0 0;
-  //animation: ${rotate} 2s linear;
+    //animation: ${rotate} 2s linear;
 `;
 
 export const SwitchButton = styled.div``;

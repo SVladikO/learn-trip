@@ -9,23 +9,11 @@ export const Article = styled.div`
   border-bottom: solid 1px #f7f6f6;
   margin: 0 0 5px 0;
 `;
-export const Index = styled.div``;
 export const Input = styled.input`
   width: 180px;
 `;
-export const Icon = styled.button`
-  border: none;
-  height: 20px;
-  width: 20px;
-  background-image: url(${p => p.url});
-  
-  &:hover {
-    cursor: pointer;
-    background-image: url(${p => p.onHoverUrl});
-  }
-`;
 export const Title = styled.div`
-  font-size: 14px;
+  font-size: 12px;
   display: flex;
   
   &:hover {
